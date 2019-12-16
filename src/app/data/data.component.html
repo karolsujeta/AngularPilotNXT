@@ -1,0 +1,34 @@
+<h1>Nie bądź młot, zrób se kod!</h1>
+
+<form [formGroup]="pilotForm" (ngSubmit)="onSubmit(pilotForm)">
+    <div class="container">
+        <div class="fwd">
+            <h3>Jazda do przodu:</h3>
+
+            <label>Obrót wału:<br />
+                <input class="field" type="text" formControlName="forward" [(ngModel)]="newforward">
+            </label><br />
+
+            <label>Moc:<br />
+                <input class="field" type="text" formControlName="power" [(ngModel)]="newpower">
+            </label><br />
+
+            <button class="send" type="submit" (click)="addTodo()">Wyślij</button>
+        </div>
+
+        <div class="lft">
+            <h3>Skręt w lewo:</h3>
+
+            <label>Obrót wału:<br />
+                <input class="field" type="text">
+            </label><br />
+
+            <label>Moc:<br />
+                <input class="field" type="text">
+            </label><br/>
+
+            <button class="send" type="submit">Wyślij</button>
+        </div>
+
+    </div>
+</form>
