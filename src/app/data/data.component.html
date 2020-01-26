@@ -1,34 +1,38 @@
 <h1>Nie bądź młot, zrób se kod!</h1>
 
-<form [formGroup]="pilotForm" (ngSubmit)="onSubmit(pilotForm)">
-    <div class="container">
-        <div class="fwd">
-            <h3>Jazda do przodu:</h3>
+<div class="container">
 
-            <label>Obrót wału:<br />
+    <div class="instructions">
+        <form [formGroup]="pilotForm" (ngSubmit)="onSubmit(pilotForm)">
+
+
+            <h3>WPROWADŹ DANE:</h3>
+
+            <label>Silniki:<br />
+                <input class="field" type="text" formControlName="type" [(ngModel)]="newtype">
+            </label><br />
+
+            <label>Ile ma jechać (cm):<br />
                 <input class="field" type="text" formControlName="forward" [(ngModel)]="newforward">
             </label><br />
 
-            <label>Moc:<br />
+            <label>Moc silnika:<br />
                 <input class="field" type="text" formControlName="power" [(ngModel)]="newpower">
             </label><br />
 
             <button class="send" type="submit" (click)="addTodo()">Wyślij</button>
-        </div>
-
-        <div class="lft">
-            <h3>Skręt w lewo:</h3>
-
-            <label>Obrót wału:<br />
-                <input class="field" type="text">
-            </label><br />
-
-            <label>Moc:<br />
-                <input class="field" type="text">
-            </label><br/>
-
-            <button class="send" type="submit">Wyślij</button>
-        </div>
-
+        </form>
     </div>
-</form>
+
+
+    <div class="guide">
+        <h3>INSTRUKCJE:</h3>
+        <p>W polu "Silniki" wpisz silnik lub silniki, których chcesz użyć:</p>
+        <ul>
+            <li>jeśli chcesz jechać do przodu lub do tyłu podaj dwa silniki, np: AB</li>
+            <li>jeśli chcesz wykonać skręt w lewo lub w prawo podaj jeden silnik, np: A</li>
+        </ul>
+        <p>W polu "Ile ma jechać" podaj jaką odległość ma przejechać robot (w cm)</p>
+        <p>W polu "Moc silnika" podaj z jaką mocą ma jechać robot</p>
+    </div>
+</div>

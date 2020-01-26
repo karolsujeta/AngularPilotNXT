@@ -1,6 +1,7 @@
 .container{
-    display: flex;
     font-size: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .field{
@@ -17,10 +18,22 @@
     margin-top: 3px;
     font-size: 20px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 15px;
 }
 
 .send:hover{
     background-color: #092722;
     color:#ffffff;
-    transition-duration: 120ms;
+    transition-duration: 500ms;
+}
+
+.guide{
+    width: 100%;
+    padding: 10px;
+}
+
+.instructions{
+    width: 100%;
+    text-align: center;
+    padding: 10px;
 }

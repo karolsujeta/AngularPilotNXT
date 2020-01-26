@@ -10,8 +10,7 @@ export class AppComponent {
   title = 'app-pilot';
 
   todosList=[{
-    forward: 12,
-    power:4
+
   }]
 
   addTodos(e){

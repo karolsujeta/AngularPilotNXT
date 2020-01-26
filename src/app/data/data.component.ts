@@ -13,6 +13,7 @@ export class DataComponent implements OnInit {
 
   newforward: String = '';
   newpower: String = '';
+  newtype: String = '';
 
   @Output()
   event = new EventEmitter<any>();
@@ -21,25 +22,22 @@ export class DataComponent implements OnInit {
   ngOnInit() {
     this.pilotForm = this.fb.group({
       forward: [''],
-      power: ['']
+      power: [''],
+      type: ['']
     });
   }
 
   addTodo() {
     var newElement = {
       forward: this.newforward,
-      power: this.newpower
+      power: this.newpower,
+      type: this.newtype
     }
     this.event.emit(newElement);
   }
 
-  onSubmit() {
-    // TODO: Use EventEmitter with form value
-    console.warn(this.pilotForm.value);
-  }
-
-
-
-
+  // onSubmit() {
+  //   console.warn(this.pilotForm.value);
+  // }
 
 }

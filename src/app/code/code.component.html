@@ -1,6 +1,9 @@
 <h2>Przesłane dane:</h2>
 
-
-<ul *ngFor="let todo of todos">
-    <p>RotateMotor(OUT_AC,{{todo.forward}},{{todo.power}});</p>
-</ul>
+<div id="main">
+    <ul *ngFor="let todo of todos">
+        <p>OnFwd(OUT_{{todo.type}},{{todo.forward}},{{todo.power}});</p>
+    </ul>
+</div>
+<!--<a href="#" id="downloadLink">Download the inner html of #main</a>-->
+<button id="downloadLink">Pobierz kod</button>
