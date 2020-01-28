@@ -5,10 +5,30 @@
     font-size: 20px;
     margin: auto;
     border-radius: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #downloadLink:hover{
     background-color: #092722;
     color:#ffffff;
     transition-duration: 500ms;
+}
+
+#main{
+    background-color: #2b2b2b;
+}
+
+p{
+    margin-left: 15px;
+}
+
+.title{
+    text-align: center;
+}
+
+.document{
+    font-size: 20px;
 }

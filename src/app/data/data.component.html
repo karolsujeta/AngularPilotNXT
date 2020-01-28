@@ -1,38 +1,57 @@
-<h1>Nie bądź młot, zrób se kod!</h1>
+<div class="document">
 
-<div class="container">
-
-    <div class="instructions">
-        <form [formGroup]="pilotForm" (ngSubmit)="onSubmit(pilotForm)">
-
-
-            <h3>WPROWADŹ DANE:</h3>
-
-            <label>Silniki:<br />
-                <input class="field" type="text" formControlName="type" [(ngModel)]="newtype">
-            </label><br />
-
-            <label>Ile ma jechać (cm):<br />
-                <input class="field" type="text" formControlName="forward" [(ngModel)]="newforward">
-            </label><br />
-
-            <label>Moc silnika:<br />
-                <input class="field" type="text" formControlName="power" [(ngModel)]="newpower">
-            </label><br />
-
-            <button class="send" type="submit" (click)="addTodo()">Wyślij</button>
-        </form>
+    <div class="nav">
+        Nie bądź młot, zrób se kod!
     </div>
 
+    <div class="container">
 
-    <div class="guide">
-        <h3>INSTRUKCJE:</h3>
-        <p>W polu "Silniki" wpisz silnik lub silniki, których chcesz użyć:</p>
-        <ul>
-            <li>jeśli chcesz jechać do przodu lub do tyłu podaj dwa silniki, np: AB</li>
-            <li>jeśli chcesz wykonać skręt w lewo lub w prawo podaj jeden silnik, np: A</li>
-        </ul>
-        <p>W polu "Ile ma jechać" podaj jaką odległość ma przejechać robot (w cm)</p>
-        <p>W polu "Moc silnika" podaj z jaką mocą ma jechać robot</p>
+        <div class="instructions">
+            <form [formGroup]="pilotForm" (ngSubmit)="onSubmit(pilotForm)">
+
+
+                <h3>WPROWADŹ DANE:</h3>
+
+                <label>Silniki:<br />
+                    <input class="field" type="text" formControlName="type" [(ngModel)]="newtype">
+                </label><br />
+
+                <label>Odległość(cm):<br />
+                    <input class="field" type="text" formControlName="forward" [(ngModel)]="newforward">
+                </label><br />
+
+                <label>Moc silnika:<br />
+                    <input class="field" type="text" formControlName="power" [(ngModel)]="newpower">
+                </label><br />
+
+                <button class="send" type="submit" (click)="addTodo()">Wyślij</button>
+            </form>
+        </div>
+
+
+        <div class="guide">
+
+            <div class="title">
+                <h3>INSTRUKCJE:</h3>
+            </div>
+
+            <div class="text">
+                Aplikacja wspomagająca tworzenie kodu za pomocą zaprogramowanych przycisków.<br />
+                Do zadań użytkownika należy wprowadzenie odpowiednich danych do wyznaczonych pól.
+                Programista może wybierać interesujące go silniki lub silnik (co wiąże się z wyborem kierunkiem jazdy),
+                odległość jaką ma przejechać robot oraz moc silnika z jaką robot ma pracować.<br /><br />
+
+                Po wprowadzeniu wszystkich danych i naciśnięciu przycisku "Pobierz kod" program generuje plik ".html",
+                który można pobrać w formacie ".txt" i wprowadzić bezpośrednio do robota.
+
+                <p>W polu "Silniki" wpisz silnik lub silniki, których chcesz użyć:</p>
+                <ul>
+                    <li>jeśli chcesz jechać do przodu lub do tyłu podaj dwa silniki, np: AB</li>
+                    <li>jeśli chcesz wykonać skręt w lewo lub w prawo podaj jeden silnik, np: A</li>
+                </ul>
+                <p>W polu "Odległość(cm)" podaj jaką odległość ma przejechać robot (w cm)</p>
+                <p>W polu "Moc silnika" podaj z jaką mocą ma jechać robot</p>
+            </div>
+        </div>
     </div>
 </div>
